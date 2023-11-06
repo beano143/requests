@@ -25,7 +25,12 @@ def return_time(time):
   keyboard.press('y')
   keyboard.release('y')
 
-  for char in time:
-    keyboard.press('char')
-    keyboard.release('char')
-    
+  kyboard.type(f"{time})
+
+  keyboard.press(enter)
+  keyboadr.release(enter)
+
+while True:
+  get_time_local()
+  return_time()
+  time.sleep(10)
