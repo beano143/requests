@@ -31,6 +31,6 @@ def return_time(time):
   keyboadr.release(enter) # simulates all the key presses to input time 
 
 while True:
-  time_local = get_time_local(EST+05EDT,M4.1.0,M10.5.0')
+  time_local = get_time_local('EST+05EDT,M4.1.0,M10.5.0')
   return_time(time_local)
   time.sleep(30)
