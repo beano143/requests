@@ -2,7 +2,7 @@ from pynput.keyboard import Key, Controller
 import time 
 import os
 
-keybpard = conytrolletr()
+keyboard = conytrolletr()
 
 def get_time_local(time_zone):
   os.environ['TZ'] = time_zone
