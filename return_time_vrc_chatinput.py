@@ -2,7 +2,7 @@ from pynput.keyboard import Key, Controller
 import time 
 import os
 
-keyboard = conytrolletr()
+keyboard = controller()
 
 def get_time_local(time_zone):
   os.environ['TZ'] = time_zone
@@ -31,6 +31,7 @@ def return_time(time):
   keyboadr.release(enter) # simulates all the key presses to input time 
 
 while True:
-  time_local = get_time_local('EST+05EDT,M4.1.0,M10.5.0')
+  # time zone+off set from UTC, daylight savings start(month #.day of the week(1-7 for that year).time (0=midnight)), daylight savings end
+  time_local = get_time_local('EST+05EDT,M4.1.0,M10.5.0') 
   return_time(time_local)
   time.sleep(30)
